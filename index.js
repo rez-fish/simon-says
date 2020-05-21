@@ -58,11 +58,13 @@ function checkAnswer(currentLevel) {
     }
   } else {
     playSound("wrong");
+    gamePattern = [];
+    userClickedPattern = [];
     level = 0;
     $("body").addClass("wrong");
     setTimeout(function () {
       $("body").removeClass("wrong");
     }, 1000);
-    $("h1").html("GAME OVER<br>Press Button To Try Again</br>");
+    $("h1").html("GAME OVER<br>Press Button To Try Again</br> ");
   }
 }
